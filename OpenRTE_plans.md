@@ -35,7 +35,7 @@ Free & Easy to use.
 
 * Receiver/Read
 
-  
+
 
 Detail of port
 
@@ -105,6 +105,8 @@ OR
 ### Middleware
 
 * Nginx
+* axios
+* vue-routes
 * 
 
 
