@@ -35,7 +35,7 @@ Free & Easy to use.
 
 * Receiver/Read
 
-  
+
 
 Detail of port
 
@@ -77,15 +77,7 @@ Detail of port
 ## 💅🎨Design📝
 
 ### Architecture Overview
-|-------|-------------|-----|---------|--------|--------|--|
-
-|-User's|------------>|NGINX|-------->|back-end|<------>|DB|
-
-|Browser|<------------|NGINX|---------|↑-↓-↑-↓-|--------|--|
-
-|-------|------------>|NGINX|<--------|front-end|
-
-|-------|-------------|-----|---------|---------|
+* TODO
 
 
 ### Front-End
@@ -113,6 +105,8 @@ OR
 ### Middleware
 
 * Nginx
+* axios
+* vue-routes
 * 
 
 
