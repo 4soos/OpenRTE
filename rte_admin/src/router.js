@@ -9,8 +9,15 @@ export default new Router({
     routes: [
         {
             path: '/',
-            name: 'Menu',
-            component: () => import('./views/Menu')
+            redirect: '/login', //重定向到登录界面
+           // name: 'Menu',
+           // component: () => import('./views/Menu')
+        },
+        {
+          path: '/login',
+          name: 'Login',
+          component: () => import('./views/user/Login')
+
         },
         {
             path: '/nav_menu',

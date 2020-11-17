@@ -1,12 +1,9 @@
 {
-  "name": "rte_admin",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
   "dependencies": {
     "axios": "^0.21.0",
     "core-js": "^3.6.5",
@@ -22,6 +19,8 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-plugin-vue": "^7.1.0",
+    "less": "^3.12.2",
+    "less-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
@@ -38,9 +37,12 @@
     },
     "rules": {}
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  "name": "rte_admin",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "version": "0.1.0"
 }

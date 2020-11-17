@@ -7,7 +7,8 @@ module.exports = {
     },
     "extends": [
         "eslint:recommended",
-        "plugin:vue/essential",
+        //"plugin:vue/essential",
+        "plugin:vue/recommended"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -21,5 +22,7 @@ module.exports = {
         "vue"
     ],
     "rules": {
-    }
+        'no-console': 'off',
+    },
+    "parser": "vue-eslint-parser"
 };

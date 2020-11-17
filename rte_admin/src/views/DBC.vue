@@ -7,6 +7,7 @@
 
 <script>
 import OTable from '../components/Table'
+
 export default {
   components: {
     OTable,
