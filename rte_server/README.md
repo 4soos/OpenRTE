@@ -50,7 +50,7 @@ app
 ```bash
 cd your_project_path_root\src\app\config
 
-pip install -r setup.cfg
+pip install -r env
 
 ```
 

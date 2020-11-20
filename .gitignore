@@ -112,6 +112,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+rte-env/
 
 # Spyder project settings
 .spyderproject
@@ -158,3 +159,5 @@ pnpm-debug.log*
 *.sw?
 .idea
 
+
+3rdlibs/

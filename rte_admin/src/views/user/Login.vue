@@ -9,10 +9,10 @@
       </div>
 
       <el-form
-        ref="loginFromRef"
+        ref="loginFormRef"
         label-width="80px"
         class="login_form"
-        :model="loginFrom"
+        :model="loginForm"
         :rules="loginRules"
       >
         <el-form-item
@@ -20,7 +20,7 @@
           prop="username"
         >
           <el-input
-            v-model="loginFrom.username"
+            v-model="loginForm.username"
             prefix-icon="el-icon-user-solid"
           />
         </el-form-item>
@@ -30,7 +30,7 @@
           prop="passwd"
         >
           <el-input
-            v-model="loginFrom.passwd"
+            v-model="loginForm.passwd"
             prefix-icon="iconfont icon-mimalan"
             type="password"
           />
@@ -39,7 +39,7 @@
         <el-form-item class="login_btn">
           <el-button
             type="success"
-            @click="signIn()"
+            @click="login()"
           >
             Sign In
           </el-button>
@@ -66,7 +66,7 @@
 export default {
   data() {
     return {
-      loginFrom: {
+      loginForm: {
         username: 'czczczz',
         passwd: '123123123'
       },
@@ -84,16 +84,21 @@ export default {
   },
   methods: {
     resetFrom() {
-      this.$refs.loginFromRef.resetFields();
+      this.$refs.loginFormRef.resetFields();
       console.log("RESET")
     },
-    signIn() {
+    login() {
       console.log("Click Login Btn");
-      this.resetFrom();
+      this.$refs.loginFormRef.validate(async valid => {
+        if (!valid) return ;
+        const result = await this.$api.post('login',this.loginForm);
+      })
+      console.log("resetFrom");
     },
     signUp() {
       console.log("Click sign up Btn");
       this.resetFrom();
+      console.log("resetFrom");
     },
 
   }
