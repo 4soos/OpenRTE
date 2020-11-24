@@ -1,0 +1,20 @@
+# run mysql-server on docker
+version: '3.8'
+services:
+  db:
+    image: mariadb
+    container_name: rte-db
+    restart: always
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    environment:
+      TZ: Asia/Shanghai
+      MYSQL_ROOT_PASSWORD: mysqlroot
+    ports:
+    - 13306:3306
+    volumes:
+    - D:\\docker_vol\\mysql_db\\open_rte:/var/lib/mysql
+
+
+#  server:
+#
+#  admin:
