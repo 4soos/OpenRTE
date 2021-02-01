@@ -67,7 +67,7 @@ export default {
   data() {
     return {
       loginForm: {
-        username: 'czczczz',
+        username: 'username',
         passwd: '123123123'
       },
       loginRules: {
@@ -91,7 +91,9 @@ export default {
       console.log("Click Login Btn");
       this.$refs.loginFormRef.validate(async valid => {
         if (!valid) return ;
-        const result = await this.$api.post('login',this.loginForm);
+        const { data: res } = await this.$api.post('login',this.loginForm);
+        if (res.meta.status !== 200) return console.log('Login Faild')
+        console.log("Success")
       })
       console.log("resetFrom");
     },

@@ -7,11 +7,11 @@ import './assets/iconfonts/iconfont.css'
 
 import App from './App.vue'
 import router from './router'
-import serverURL from './api/index'
+import API_URL from './api/index'
 
 Vue.use(ElementUI);
 
-axios.defaults.baseURL = serverURL
+axios.defaults.baseURL = API_URL
 Vue.prototype.$api = axios
 
 
